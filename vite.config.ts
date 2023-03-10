@@ -1,3 +1,4 @@
+import path from "path"
 import { defineConfig } from "vite"
 import suidPlugin from "@suid/vite-plugin"
 import solidPlugin from "vite-plugin-solid"
@@ -32,4 +33,9 @@ export default defineConfig({
       modernPolyfills: ["es.string.replace-all"],
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })

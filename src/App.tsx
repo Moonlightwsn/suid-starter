@@ -10,7 +10,6 @@ const popTimer = () =>
       createEffect(() => {
         if (t.paused) return
         const interval = setInterval(() => {
-          console.log(t.paused)
           setLife((l) => l - 0.5)
         }, 10)
 
@@ -30,17 +29,24 @@ const popTimer = () =>
     {
       duration: 2000,
       unmountDelay: 0,
-      position: "top-center",
     }
   )
+
+const popSuccess = () => toast.success("Toast launched successfully!")
 
 export default function App() {
   return (
     <>
-      <Button variant="contained" onClick={popTimer}>
+      <Button
+        variant="contained"
+        onClick={() => {
+          popSuccess()
+          popTimer()
+        }}
+      >
         Hello world
       </Button>
-      <Toaster />
+      <Toaster position="top-center" />
     </>
   )
 }
