@@ -2,6 +2,8 @@ import { createSignal, createEffect, onCleanup } from "solid-js"
 import Button from "@suid/material/Button"
 import toast, { Toaster } from "solid-toast"
 
+import styles from "./App.module.less"
+
 const popTimer = () =>
   toast.custom(
     (t) => {
@@ -37,6 +39,7 @@ const popSuccess = () => toast.success("Toast launched successfully!")
 export default function App() {
   return (
     <>
+      <div class={styles["my-component"]}>My Component</div>
       <Button
         variant="contained"
         onClick={() => {
