@@ -1,6 +1,7 @@
 const tailwindcss = require("tailwindcss")
 const autoprefixer = require("autoprefixer")
 const px2viewport = require("postcss-px-to-viewport")
+const px2rem = require("postcss-pxtorem")
 
 module.exports = {
   plugins: [
@@ -30,6 +31,10 @@ module.exports = {
       landscape: false, // 是否添加根据 landscapeWidth 生成的媒体查询条件
       landscapeUnit: "vw", // 横屏时使用的单位
       landscapeWidth: 1125, // 横屏时使用的视窗宽度
+    }),
+    px2rem({
+      rootValue: 16,
+      propList: ["*"],
     }),
   ],
 }
