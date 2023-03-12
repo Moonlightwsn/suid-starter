@@ -1,6 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web"
 import { Router, hashIntegration } from "@solidjs/router"
+import I18nProvider from "@/locale"
 import App from "@/App"
 import "@/index.css"
 
@@ -14,9 +15,11 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 
 render(
   () => (
-    <Router source={hashIntegration()}>
-      <App />
-    </Router>
+    <I18nProvider locale="en">
+      <Router source={hashIntegration()}>
+        <App />
+      </Router>
+    </I18nProvider>
   ),
   document.getElementById("root")!
 )

@@ -8,6 +8,7 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@solid-primitives/i18n": "^1.2.1",
     "@solidjs/router": "^0.8.0",
     "@suid/icons-material": "^0.5.9",
     "@suid/material": "^0.10.2",

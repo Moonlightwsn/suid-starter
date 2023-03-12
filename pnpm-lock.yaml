@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@solid-primitives/i18n': ^1.2.1
   '@solidjs/router': ^0.8.0
   '@suid/icons-material': ^0.5.9
   '@suid/material': ^0.10.2
@@ -21,6 +22,7 @@ specifiers:
   vite-plugin-solid: 2.5.0
 
 dependencies:
+  '@solid-primitives/i18n': 1.2.1_solid-js@1.6.13
   '@solidjs/router': 0.8.0_solid-js@1.6.13
   '@suid/icons-material': 0.5.9_solid-js@1.6.13
   '@suid/material': 0.10.2_solid-js@1.6.13
@@ -1512,6 +1514,23 @@ packages:
 
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
+  /@solid-primitives/context/0.1.4_solid-js@1.6.13:
+    resolution: {integrity: sha512-k7lwcepYQJazsctHMkz88GAxEH6J7NYUprYjcnpkgD95qqWav8KaaQ3n+uTrB2seSVLMMqok1YyP8dqsiN5ltQ==}
+    peerDependencies:
+      solid-js: ^1.6.0
+    dependencies:
+      solid-js: 1.6.13
+    dev: false
+
+  /@solid-primitives/i18n/1.2.1_solid-js@1.6.13:
+    resolution: {integrity: sha512-IfpIFPqpKX6pRnGv4qc+02+CGRZl+IGirpbX3Oxk04sEDnOyYOUs9S5+na6jntcU3aAEirchViOxJUheRbJmHQ==}
+    peerDependencies:
+      solid-js: ^1.6.0
+    dependencies:
+      '@solid-primitives/context': 0.1.4_solid-js@1.6.13
+      solid-js: 1.6.13
     dev: false
 
   /@solidjs/router/0.8.0_solid-js@1.6.13:
